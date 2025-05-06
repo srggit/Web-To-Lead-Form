@@ -1,4 +1,4 @@
-let checkCaptcha = false;
+let checkCaptcha = true;
 
 function beforeSubmit(event) {
 
