@@ -31,10 +31,15 @@ input{
 
 .submitBtn{
     /* margin: top right bottom left */
-    margin: 30px auto 0 auto;
+    margin: 5px auto 0 auto;
     background-color: rgb(173, 239, 149);
     border-radius: 5px;
     width: 40%;
     height: 40px;
 }
 
+.g-recaptcha{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
