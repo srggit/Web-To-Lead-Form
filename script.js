@@ -42,5 +42,5 @@ function timestamp() {
 // setInterval(timestamp, 500);
 
 function handleCaptcha() {
-    this.checkCaptcha = true;
+    checkCaptcha = true;
 }
