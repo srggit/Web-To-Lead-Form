@@ -1,0 +1,40 @@
+*{
+    /* border: 0;
+    padding: 0; */
+    box-sizing: border-box;
+    font-family: Alata;
+}
+
+form{
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+    border: 2px solid grey;
+    padding: 10px; 
+}
+
+h1{
+    text-align: center;
+}
+
+label, input{
+    display: block;
+}
+
+label{
+    color: green;
+}
+
+input{
+    width: 100%;
+}
+
+.submitBtn{
+    /* margin: top right bottom left */
+    margin: 30px auto 0 auto;
+    background-color: rgb(173, 239, 149);
+    border-radius: 5px;
+    width: 40%;
+    height: 40px;
+}
+
