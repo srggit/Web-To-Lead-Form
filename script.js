@@ -23,6 +23,8 @@ function beforeSubmit(event) {
     } else {
         alert('Confirm you are not Robot !!');
         event?.preventDefault();
+        console.log('event Prevent Default ', event);
+
     }
 }
 
