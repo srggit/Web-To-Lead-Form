@@ -22,7 +22,7 @@ function beforeSubmit(event) {
         outputDate.value = formattedDate;
     } else {
         alert('Confirm you are not Robot !!');
-        event?.preventDefault();
+        event.preventDefault();
         console.log('event Prevent Default ', event);
 
     }
