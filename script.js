@@ -1,20 +1,29 @@
-function beforeSubmit() {
-    let outputDate = document.querySelector(".outputDate");
-    let inputDate = document.querySelector(".inputDate");
+let checkCaptcha = false;
 
-    console.log("inputDate : ", inputDate?.value);
+function beforeSubmit(event) {
 
-    // To convert String to Date and Store it in Salesforce, we need locale of the user
-    // Here the type of inputDate is String.
-    // Get the Locale of the User using Developer Console
-    // System.debug(UserInfo.getLocale())
-    // Locale: en_IN
+    if (checkCaptcha) {
 
-    let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN");
-    console.log("formattedDate : ", formattedDate);
+        let outputDate = document.querySelector(".outputDate");
+        let inputDate = document.querySelector(".inputDate");
 
-    // Set the formatted value to the hidden field value
-    outputDate.value = formattedDate;
+        console.log("inputDate : ", inputDate?.value);
+
+        // To convert String to Date and Store it in Salesforce, we need locale of the user
+        // Here the type of inputDate is String.
+        // Get the Locale of the User using Developer Console
+        // System.debug(UserInfo.getLocale())
+        // Locale: en_IN
+
+        let formattedDate = new Date(inputDate.value).toLocaleDateString("en-IN");
+        console.log("formattedDate : ", formattedDate);
+
+        // Set the formatted value to the hidden field value
+        outputDate.value = formattedDate;
+    } else {
+        alert('Confirm you are not Robot !!');
+        event?.preventDefault();
+    }
 }
 
 function timestamp() {
@@ -28,4 +37,8 @@ function timestamp() {
             JSON.stringify(elems);
     }
 }
-setInterval(timestamp, 500);
+// setInterval(timestamp, 500);
+
+function handleCaptcha() {
+    this.checkCaptcha = true;
+}
