@@ -10,25 +10,24 @@
   </head>
 
   <body>
-    <h1>Create Lead</h1>
     <form
       action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DNS000003EbxG"
-      onsubmit="beforeSubmit(event)"
       method="POST"
+      onsubmit="beforeSubmit(event)"
     >
       <input type="hidden" name="oid" value="00DNS000003EbxG" />
-
-      <input
-        type="hidden"
-        name="captcha_settings"
-        value='{"keyname":"Web_To_Lead_Re_Captcha","fallback":"true","orgId":"00DNS000003EbxG","ts":""}'
-      />
-
       <input
         type="hidden"
         name="retURL"
         value="https://srggit.github.io/Web-To-Lead-Form/thanks.html"
       />
+
+      <!--  ----------------------------------------------------------------------  -->
+      <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+      <!--  these lines if you wish to test in debug mode.                          -->
+      <!--  <input type="hidden" name="debug" value=1>                              -->
+      <!--  <input type="hidden" name="debugEmail" value="srcoders01@gmail.com">    -->
+      <!--  ----------------------------------------------------------------------  -->
 
       <input type="hidden" name="Lead_Date__c" class="outputDate" />
 
@@ -65,28 +64,13 @@
       <label for="date">Lead Date</label>
       <input type="date" class="inputDate" />
 
-      <!-- Lead Date:<span class="dateInput dateOnlyInput">
-        <input
-          id="00NNS00001MYMQj"
-          name="00NNS00001MYMQj"
-          size="12"
-          type="text" /></span
-      ><br /> -->
-
-      <!-- <div
-        class="g-recaptcha"
-        data-sitekey="6Le4AjArAAAAAL9XVYocIdxgAqx82UFx2kwwp_kP"
-      ></div> -->
-      <!-- <div
+      <div
         class="g-recaptcha"
         data-sitekey="6Le4AjArAAAAAL9XVYocIdxgAqx82UFx2kwwp_kP"
         data-callback="handleCaptcha"
-      ></div> -->
-      <br />
+      ></div>
 
-      <input type="submit" name="submit" class="submitBtn" />
+      <input type="submit" name="submit" />
     </form>
   </body>
 </html>
-
-<!-- https://login.salesforce.com/-->
